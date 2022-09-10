@@ -25,6 +25,8 @@ include a listing of each candidate, their number of votes and percentage of the
 For the provided dataset, the pilot program returned accurate information and correctly declared the winner of the election.  It 
 is expected that with minimal modifications, this script could be used for any election. 
 
+### Input Files
+
 Currently, the program is built to look for a particular file in a specific location.  
 ~~~~
 # Add a variable to load a file from a path.
@@ -45,7 +47,7 @@ str = raw_input("Enter the name of your text file - please use / backslash when 
 
 f = open(str,"r+")
 ~~~~~
-
+### Outbound Text Files 
 Additionally, for this to scale and allow remote election boards the ability to create and save their own results files, it would be necessary to create unique file names when the file is created, rather than writing to a common file. (This could 
 potentially introduce the risk of overwriting another board's data).  This can be implemented by using the functions in the UUID
 library. (https://www.pythoneasy.com/learn/python-how-to-create-a-unique-file-name-in-python)
@@ -69,10 +71,10 @@ output_file_message = (
 )
 print(output_file_message) #this will display the file name to the terminal
 ~~~~
-
+### Emailing Results 
 In order to reduce 'wait' time for the file to generate, it could also be possible to have the system modified to mail files to individuals at each county election board.  This is functionality that is 
 available through external libraies such as smtplib (https://docs.python.org) as well as through integrations with commercial emailing products.  That is currently outside of the scope of this project's
 requirements, and it is recommended that a stand alone project be considered to implement email notifications correctly. 
-
+### Performance and Load Testing
 For larger elections, the number of votes will increase dramatically (as well as numbers of counties and candidates included). It is recommended that performance and load testing be done against this code with expected levels of data prior to releasing to the election boards.  The total number of votes for just the coordinated off year state elections was 1,557,457 votes.  Dependent on the election cycle, and what initiatives are being presented for voting may drive higher voter turnout.  It is essential to ensure that
 the application is able to handle inbound data, outbound results, and analysis processing as efficiently as possible. 
