@@ -1,12 +1,12 @@
 # election_analysis_challenge
-#Colorado Pilot County Election Analysis 
+# Colorado Pilot County Election Analysis 
 
-##Overview of Election Audit:
+## Overview of Election Audit:
 The purpose of this analysis project is to build a proof of concept into automatically counting and tallying voting results. 
 The initial scope of the audit was for 3 counties within Colorado during the latest elections.  The project was scoped to calculate the number of votes per county and percentage of total votes for that county.  Additionally, the project also was to 
 include a listing of each candidate, their number of votes and percentage of the total of votes.  
 
-##Election Audit Results 
+## Election Audit Results 
 * How many votes were cast in this congressional election? 
     - The total number of votes cast was: 369,711
 * Which county had the largest number of votes? 
@@ -21,7 +21,7 @@ include a listing of each candidate, their number of votes and percentage of the
     - Vote Count: 272,892
     - Percentage of Total: 73.8%
 
-##Election Audit Summary 
+## Election Audit Summary 
 For the provided dataset, the pilot program returned accurate information and correctly declared the winner of the election.  It 
 is expected that with minimal modifications, this script could be used for any election. 
 
